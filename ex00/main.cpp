@@ -2,11 +2,10 @@
 
 int main()
 {
-	Zombie* zombiePtr = newZombie("FRED");
-	zombiePtr->announce();
-	delete zombiePtr;
+	Zombie* stack = newZombie("stack");
+	stack->announce();
+	delete stack;
 
-	randomChump("Julius");
-
+	randomChump("heap");
 	return 0;
 }

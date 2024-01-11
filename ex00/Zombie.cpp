@@ -1,5 +1,7 @@
 #include "Zombie.hpp"
 
+Zombie::Zombie ( void ) : _name("defaultZ") {};
+
 Zombie::Zombie ( std::string zombieName) : _name(zombieName) {};
 
 void Zombie::announce() {
