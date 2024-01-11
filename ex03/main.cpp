@@ -1,15 +1,19 @@
 #include "HumanA.hpp"
+#include "HumanB.hpp"
 
 int main () {
-/* 	Weapon club = Weapon("crude spiked club");
-
-	club.setType("some bullshit"); */
-
-	Weapon club = Weapon("DILDO");
-	HumanA bob("Harry Potter", club);
+	Weapon club_a("REF");
+	HumanA bob("Harry Potter", club_a);
 	bob.attack();
-	club.setType("BIGGER DILDO");
+	club_a.setType("BIGGER REF");
 	bob.attack();
 
+
+	Weapon club_b("POINTER");
+	HumanB jim("Jim");
+	jim.setWeapon(&club_b);
+	jim.attack();
+	club_b.setType("BIGGER POINTER");
+	jim.attack();
 	return 0;
 }
